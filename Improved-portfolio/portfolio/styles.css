@@ -53,6 +53,7 @@ img {
   top: 0;
   left: 0;
   width: 100%;
+  box-sizing: border-box;
   background: #1a1a1a;
   z-index: 1000;
   display: flex;
@@ -264,9 +265,28 @@ footer {
 
 /* Media Queries */
 @media (max-width: 600px) {
-  .nav li {
-    display: none;
+  .nav {
+    padding: 0.8rem 1rem;
   }
+
+  .nav .brand {
+    font-size: 1.1rem;
+  }
+
+  .nav .links {
+    margin-right: 0;
+    gap: 0.9rem;
+  }
+
+  .nav ul {
+    margin: 0;
+    gap: 0.9rem;
+  }
+
+  .nav .links a {
+    font-size: 0.95rem;
+  }
+
   .info-box {
     margin: auto;
   }
@@ -439,6 +459,19 @@ a:hover {
     text-align: center;
   }
 
+  .about .about-info {
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+  }
+
+  .about .about-info p {
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 0 0.9rem;
+  }
+
   .home img {
     max-width: 70%; /* Reduce photo size */
     height: auto;
@@ -447,7 +480,20 @@ a:hover {
 
   .home .info-box {
     font-size: 0.9rem; /* Minimize font size */
-    padding: 10px; /* Adjust padding */
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+    text-align: left;
+  }
+
+  .home .info-box h1,
+  .home .info-box h3 {
+    margin: 0 0 0.6rem;
+  }
+
+  .home .info-box p {
+    line-height: 1.6;
+    margin: 0;
   }
 
   /* Center Content and Adjust Layout for Small Devices */
